@@ -5,21 +5,19 @@ namespace EstudoJWT.Infraestrutura
 {
     public static class ConversorUsuario
     {
-        public static Usuario ConvertToModelDAO(UsuarioViewModel pUsuarioViewModel)
+        public static Usuario ConvertToModelDAO(LoginViewModel pUsuarioViewModel)
         {
             var usuario = new Usuario();
-            usuario.Id = pUsuarioViewModel.Id;
             usuario.Email = pUsuarioViewModel.Email;
             usuario.Senha = pUsuarioViewModel.Senha;
             return usuario;
         }
 
-        public static UsuarioViewModel ConvertToModel(Usuario pUsuario)
+        public static Usuario ConvertToModelDAO(RegistrarViewModel pRegistrarViewModel)
         {
-            var usuario = new UsuarioViewModel();
-            usuario.Id = pUsuario.Id;
-            usuario.Email = pUsuario.Email;
-            usuario.Senha = pUsuario.Senha;
+            var usuario = new Usuario();
+            usuario.Email = pRegistrarViewModel.Email;
+            usuario.Senha = pRegistrarViewModel.Senha;
             return usuario;
         }
     }

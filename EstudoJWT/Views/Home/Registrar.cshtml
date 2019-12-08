@@ -1,11 +1,11 @@
-﻿@model EstudoJWT.Models.LoginViewModel
+﻿@model EstudoJWT.Models.RegistrarViewModel
 @{
     Layout = "~/Views/Shared/_Home.cshtml";
 }
 
-<h2 class="title-container-content">Login</h2>
+<h2 class="title-container-content">Cadastro de Usuário</h2>
 
-@using (Html.BeginForm("Autenticar", "Autenticacao", FormMethod.Post))
+@using (Html.BeginForm("Registrar", "Home", FormMethod.Post))
 {
     <div class="container-form">
         @Html.TextBox(nameof(Model.Email), "", new { type = "email", @class = "form-control", placeholder = "Email" })
@@ -14,9 +14,6 @@
         @Html.TextBox(nameof(Model.Senha), "", new { type = "password", @class = "form-control", placeholder = "Senha" })
     </div>
     <div class="container-button">
-        <button type="submit" class="btn btn-cadastrar">Entrar</button>
-    </div>
-    <div class="container-extra">
-        <p>Não possui uma conta? @Html.ActionLink("Clique aqui para se registrar.", "Registrar", "Home")</p>
+        <button type="submit" class="btn btn-cadastrar">Cadastrar</button>
     </div>
 }

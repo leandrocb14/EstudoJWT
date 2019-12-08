@@ -1,0 +1,48 @@
+﻿body {
+    background-color: #E8FAFE;
+}
+
+.container-content {
+    position: relative;
+    transform: translateY(calc(1px));
+    min-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30vw;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 2.333333vw 4vw;
+}
+@media only screen and (max-width: 501px) {
+    .container-content {
+        min-width: 300px;
+    }
+}
+
+@media only screen and (max-width: 301px) {
+    .container-content {
+        min-width: 250px;
+    }
+}
+
+.title-container-content {
+    text-align: center;
+    margin: 0px;
+    padding-bottom: 20px;
+}
+
+.container-button {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-cadastrar {
+    background-color: #4272D7;
+    color: white;
+    width: 100%;
+}
+
+.container-extra {
+    padding-top: 15px;
+    text-align: center;
+}

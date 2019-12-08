@@ -26,5 +26,20 @@ namespace EstudoJWT.DAO
             collectionUsuario.UpdateOne(filter, update);
         }
 
+        public Usuario BuscaUsuarioPorEmail(string pEmail)
+        {
+            var filter = Builders<Usuario>.Filter.Eq(u => u.Email, pEmail);
+            return collectionUsuario.Find(filter).FirstOrDefault();
+        }
+
+        public Usuario BuscaUsuarioPorEmailESenha(Usuario pUsuario)
+        {
+            var usuarioFilter = Builders<Usuario>.Filter;
+            var filter = usuarioFilter.And(
+                usuarioFilter.Eq(u => u.Email, pUsuario.Email),
+                usuarioFilter.Eq(u => u.Senha, pUsuario.Senha)
+            );
+            return collectionUsuario.Find(filter).FirstOrDefault();
+        }
     }
 }

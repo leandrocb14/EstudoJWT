@@ -1,0 +1,11 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section RenderCss{
+    <link href="~/Content/Home/Index.css" rel="stylesheet" type="text/css" />
+}
+
+<div class="container-content">
+    @RenderBody()
+</div>
